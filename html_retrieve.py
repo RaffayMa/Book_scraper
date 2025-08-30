@@ -1,6 +1,6 @@
 import requests
 
-url = "https://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+url = "https://books.toscrape.com"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:142.0) Gecko/20100101 Firefox/142.0"
@@ -15,3 +15,6 @@ if r.status_code == 200:
     print("Sucess")
 else:
     print("Error:", r.status_code)
+
+
+

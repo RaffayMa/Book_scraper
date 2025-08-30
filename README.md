@@ -6,3 +6,4 @@ We need to locally retirieve the Website for access
  3. create a local request with headers and url
  4. write the request to a local html file  ( Make sure to error chect the server)
 
+Parsing the HTML to requirement
