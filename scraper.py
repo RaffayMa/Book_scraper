@@ -8,14 +8,22 @@ soup = BeautifulSoup(html, 'html.parser')
 #print(soup.prettify())
 
 # goal for this script get each product title, price and availability
+# Create and access a single book obj print title, price and availablity
 
-for price in soup.find_all(class_='price_color'):
-    p = price
-    print(p.text)
+for cont in soup.find_all('li'):
+    book = cont.find(class_="product_pod")
+    if book:
+        title = book.h3.a['title']
+        pp = book.find(class_="price_color").text
+        avail = book.find(class_="instock availability").text
+    else :
+        print("Error scraping book")
 
-for avail in soup.find_all(class_='instock availability'):
-    a = avail
-    print(a.text)
+# Print extracted details
+print(title)
+print(pp)
+print(avail)
+print(" ")
 
+# Problem only print last book details need to print all of the items/books in the page
 
-# Problem the data is being extracted seperately need to create and access a single book obj print title, price and availablity
